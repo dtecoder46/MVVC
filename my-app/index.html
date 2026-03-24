@@ -7,20 +7,28 @@
     <title>Task Tracker HTML</title>
   </head>
   <body>
+    <h1>Task Tracker</h1>
+    <h2>Add a task</h2>
     <input type="text" id="taskInput" placeholder="Enter a task" />
     <button id="addTaskButton" onclick="addTask(document.getElementById('taskInput').value)">Add Task</button>
-    <ul id="taskList"></ul>
+    <ol id="taskList"></ol>
+
+    <h2>Mark a task as done</h2>
+    <input type="text" id="doneTaskInput" placeholder="Enter a task number to mark as done" />
+    <button id="markDoneButton" onclick="markTaskAsDone(document.getElementById('doneTaskInput').value)">Mark as Done</button>
+
+    <h2>Tasks Done</h2>
+    <p id="taskCount"></p>
+
     <script>
       taskArray = [];
+      tasksDone = 0;
 
       function addTask(task) {
         const taskList = document.getElementById('taskList');
         const taskItem = document.createElement('li');
 
-        const doneButton = document.createElement('button');
-        doneButton.textContent = 'Mark as Done';
-
-        taskItem.innerHTML = task + " " + doneButton.outerHTML;
+        taskItem.innerHTML = task;
         taskList.appendChild(taskItem);
 
         taskArray.push(task);
@@ -34,7 +42,35 @@
           storedTasks.forEach(task => addTask(task));
         }
       }
+
+      function loadTaskCount() {
+        const storedTasksDone = localStorage.getItem('tasksDone');
+        if (storedTasksDone) {
+          tasksDone = parseInt(storedTasksDone);
+          updateTaskCount();
+        }
+      }
+
+      function markTaskAsDone(taskNumber) {
+        if (isNaN(taskNumber) || taskNumber < 1 || taskNumber > taskArray.length) {
+          alert('Please enter a valid task number.');
+          return;
+        }
+
+        taskArray.splice(taskNumber - 1, 1);
+        localStorage.setItem('tasks', JSON.stringify(taskArray));
+        tasksDone++;
+        updateTaskCount();
+      }
+
+      function updateTaskCount() {
+        const TaskCountElement = document.getElementById('taskCount');
+        TaskCountElement.innerHTML = `${tasksDone}`;
+        
+        localStorage.setItem('tasksDone', tasksDone);
+      }
       window.onload = loadTasks;
+      window.onload = loadTaskCount;
     </script>
   </body>
 </html>
