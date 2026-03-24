@@ -38,3 +38,5 @@ This template features a task tracking website for boosting productivity
 [HTML Web Storage](https://www.w3schools.com/html/html5_webstorage.asp)
 
 [Fireship Vanilla JS ToDo App](https://youtu.be/cuHDQhDhvPE?si=UFjolhSwc55hdoCU)
+
+[JS Array Splice](https://www.w3schools.com/jsref/jsref_splice.asp)
