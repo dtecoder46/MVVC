@@ -12,3 +12,8 @@ This template features a task tracking website for boosting productivity
 # Overall structure
 
 ![Diagram of MVVC paradigm + Task Tracker website](/img/MVVC.png)
+
+# Sources
+[HTML Web Storage](https://www.w3schools.com/html/html5_webstorage.asp)
+
+[Fireship Vanilla JS ToDo App](https://youtu.be/cuHDQhDhvPE?si=UFjolhSwc55hdoCU)

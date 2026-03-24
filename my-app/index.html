@@ -11,14 +11,30 @@
     <button id="addTaskButton" onclick="addTask(document.getElementById('taskInput').value)">Add Task</button>
     <ul id="taskList"></ul>
     <script>
+      taskArray = [];
+
       function addTask(task) {
         const taskList = document.getElementById('taskList');
         const taskItem = document.createElement('li');
+
         const doneButton = document.createElement('button');
         doneButton.textContent = 'Mark as Done';
+
         taskItem.innerHTML = task + " " + doneButton.outerHTML;
         taskList.appendChild(taskItem);
+
+        taskArray.push(task);
+
+        localStorage.setItem('tasks', JSON.stringify(taskArray));
       }
+
+      function loadTasks() {
+        const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+        if (storedTasks) {
+          storedTasks.forEach(task => addTask(task));
+        }
+      }
+      window.onload = loadTasks;
     </script>
   </body>
 </html>
