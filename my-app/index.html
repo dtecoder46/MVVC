@@ -7,7 +7,18 @@
     <title>Task Tracker HTML</title>
   </head>
   <body>
-    <p>hi</p>
-    <script type="module" src="/src/main.js"></script>
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <button id="addTaskButton" onclick="addTask(document.getElementById('taskInput').value)">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+      function addTask(task) {
+        const taskList = document.getElementById('taskList');
+        const taskItem = document.createElement('li');
+        const doneButton = document.createElement('button');
+        doneButton.textContent = 'Mark as Done';
+        taskItem.innerHTML = task + " " + doneButton.outerHTML;
+        taskList.appendChild(taskItem);
+      }
+    </script>
   </body>
 </html>
