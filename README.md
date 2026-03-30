@@ -1,4 +1,7 @@
 # MVVC
+
+![Task Tracker logo](./my-app/public/Task_Tracker.png)
+
 Short for Model-View-Visualization-Controller, a full-stack paradigm for data-driven development
 
 This template features a task tracking website for boosting productivity
