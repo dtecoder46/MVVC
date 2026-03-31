@@ -1,6 +1,6 @@
 # MVVC
 
-![Task Tracker logo](./my-app/public/Task_Tracker.png)
+<img src="./my-app/public/Task_Tracker.png" alt="Task Tracker logo" width="100" height="100">
 
 Short for Model-View-Visualization-Controller, a full-stack paradigm for data-driven development
 
@@ -38,6 +38,8 @@ This template features a task tracking website for boosting productivity
 4. Python
 
 # Sources
-[HTML Web Storage](https://www.w3schools.com/html/html5_webstorage.asp)
+[HTML Tutorial](https://www.w3schools.com/html/default.asp)
 
 [Fireship Vanilla JS ToDo App](https://youtu.be/cuHDQhDhvPE?si=UFjolhSwc55hdoCU)
+
+[Inspiration for the website design: BigTime](https://getdemos.softwarefinder.com/pm/bigtime/?utm_campaign=Bing%20%7C%20Project%20Management%20%7C%20All%20%7C%20Branded%20%7C%20Broad&utm_term=bigtime%20time%20tracking&utm_source=bing&utm_medium=ppc&hsa_grp=1360098469050443&hsa_mt=b&hsa_tgt=kwd-85007405361521:loc-190&hsa_kw=bigtime%20time%20tracking&hsa_ad=85006564271316&hsa_acc=F149SSHR&hsa_cam=532695926&hsa_ver=3&hsa_src=o&hsa_net=bing&search_term=productivity%20apps&msclkid=8321e31f075d152202518ad4ea4525b9)
