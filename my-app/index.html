@@ -5,10 +5,73 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Tracker HTML</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+
+      #navbar {
+        position: absolute;
+        width: 935px;
+        height: 85px;
+
+        display: inline;
+        
+        background: #E6E6E6;
+      }
+
+      #logo {
+        display: inline;
+        padding-left: 20px;
+        padding-top: 2px;
+        padding-bottom: 0px;
+      }
+
+      #title {
+        display: inline;
+        padding-left: 10px;
+
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+
+        text-align: center;
+        line-height: 20px;
+      }
+
+      #title_div {
+        display: inline;
+
+        width: 20px;
+        height: 20px;
+      }
+
+    </style>
   </head>
   <body>
-    <img src="./public/Task_Tracker.png" alt="Task Tracker logo">
-    <h1>Task Tracker</h1>
+
+    <div id="navbar">
+
+      <svg width="935" height="6" viewBox="0 0 935 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="3" x2="935" y2="3" stroke="#016FB9" stroke-width="6"/>
+      </svg>
+
+      <img id="logo" src="./public/Task_Tracker.png" alt="Task Tracker logo" width="35" height="41">
+      
+      <div id="title_div">
+        <h1 id="title">Task Tracker</h1>
+      </div>
+
+      <svg width="935" height="2" viewBox="0 0 935 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="1" x2="935" y2="1" stroke="#016FB9" stroke-width="2"/>
+      </svg>
+
+    </div>
+
+    <br><br><br><br>
+
     <h2>Add a task</h2>
     <input type="text" id="taskInput" placeholder="Enter a task" />
     <button id="addTaskButton" onclick="addTask(document.getElementById('taskInput').value)">Add Task</button>
@@ -47,7 +110,7 @@
       function loadTaskCount() {
         const storedTasksDone = localStorage.getItem('tasksDone');
         if (storedTasksDone) {
-          tasksDone = parseInt(storedTasksDone);
+          tasksDone = parseInt(stored, TasksDone);
           updateTaskCount();
         }
       }

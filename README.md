@@ -40,6 +40,8 @@ This template features a task tracking website for boosting productivity
 # Sources
 [HTML Tutorial](https://www.w3schools.com/html/default.asp)
 
+[CSS Tutorial](https://www.w3schools.com/css/default.asp)
+
 [Fireship Vanilla JS ToDo App](https://youtu.be/cuHDQhDhvPE?si=UFjolhSwc55hdoCU)
 
 [Inspiration for the website design: BigTime](https://getdemos.softwarefinder.com/pm/bigtime/?utm_campaign=Bing%20%7C%20Project%20Management%20%7C%20All%20%7C%20Branded%20%7C%20Broad&utm_term=bigtime%20time%20tracking&utm_source=bing&utm_medium=ppc&hsa_grp=1360098469050443&hsa_mt=b&hsa_tgt=kwd-85007405361521:loc-190&hsa_kw=bigtime%20time%20tracking&hsa_ad=85006564271316&hsa_acc=F149SSHR&hsa_cam=532695926&hsa_ver=3&hsa_src=o&hsa_net=bing&search_term=productivity%20apps&msclkid=8321e31f075d152202518ad4ea4525b9)
